@@ -5,9 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇯🇵 Oracle-Tokyo-1, server: t1.5g.wf, port: 43421, type: vmess, uuid: 554fb64f-345f-4afd-bc58-21a5ecc981b3, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /802d19c4c/, headers: {Host: t1.5g.wf}}}
-  - {name: 🇯🇵 Oracle-Tokyo-2, server: t2.5g.wf, port: 32321, type: vmess, uuid: ab5075c5-c490-40b3-b5cc-472c8e23b569, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /aebe9ef26d/, headers: {Host: t2.5g.wf}}}
-  - {name: Racknerd-SanJose-1, server: t3.5g.wf, port: 32322, type: vmess, uuid: e54e7bbe-2f5e-4e9a-b0b6-17fe04610f59, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /690d385fb4/, headers: {Host: t3.5g.wf}}}
+  - {name: 🇯🇵 Oracle-Tokyo-1, server: t1.jklash.top, port: 43421, type: vmess, uuid: 255030d4-c617-4344-8487-231d0686d4da, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /1ef6/, headers: {Host: t1.jklash.top}}}
+  - {name: 🇯🇵 Oracle-Tokyo-2, server: t2.jklash.top, port: 32321, type: vmess, uuid: 479eb63c-b123-4c59-85f3-708d7acff0d6, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /396b9/, headers: {Host: t2.jklash.top}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,7 +15,6 @@ proxy-groups:
       - DIRECT
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,7 +23,6 @@ proxy-groups:
     proxies:
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -34,7 +31,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: 📲 电报信息
     type: select
     proxies:
@@ -42,7 +38,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -50,7 +45,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -58,7 +52,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -67,7 +60,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,7 +84,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇯🇵 Oracle-Tokyo-1
       - 🇯🇵 Oracle-Tokyo-2
-      - Racknerd-SanJose-1
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
